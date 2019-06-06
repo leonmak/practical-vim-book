@@ -1,14 +1,16 @@
-[TOC]
+## The VIM way
 
-## ~ The VIM way
+
 
 ### 0. Mac Notes
 
 - Map <CAPS-LOCK> to <ESC>
-- Karibiner Elements: Swap <fn> and <ctrl> so 1 hand to 
-- <C-a> means `<CTRL>`+`a` from this point
 
+- <C-a> means <CTRL>+<a> from this point
 
+- Karibiner Elements: Swap <FN> and <CTRL> so 1 hand can do <C-r>
+
+  
 
 ### 1. Dot Command
 
@@ -20,9 +22,11 @@
 
 ### 2. Compound Movement
 
-up/down: `j` /`k`
+Basic motions:
 
-left/right: `h`/`l`
+- up/down: `j` /`k`
+- left/right: `h`/`l`
+- prev/next para: `<S-[>` /  `<S-]>` 
 
 | Compound Command | Equivalent in Longhand |
 | :--------------- | :--------------------- |
@@ -34,6 +38,8 @@ left/right: `h`/`l`
 | o                | A<CR>                  |
 | O                | ko                     |
 
+
+
 ### 3. Repeatable Chunks
 
 __e.g. Adding space between + sign:__
@@ -42,6 +48,8 @@ __e.g. Adding space between + sign:__
 2. `s<SPACE>+<SPACE><ESC>`: replace '+' with ' + '
 3. `;`: repeat search (1)
 4. `.`: repeat replacement
+
+
 
 ### 4. Repeat Forward, or Backward
 
@@ -55,6 +63,8 @@ __e.g. Adding space between + sign:__
 | Perform substitution             | :s/target/replacement | &      | u       |
 | Execute a sequence of changes    | qx{changes}q          | @x     | u       |
 
+ 
+
 ### 5. Replace by Hand
 
 intent: replace selected 'target' with 'new_word'
@@ -65,6 +75,8 @@ intent: replace selected 'target' with 'new_word'
 3. `cw<new_word><ESC>`: _change_ 'target' to 'new word'
 4. `n`: move the next match for 'target'
 5. `.`: repeat the change word action
+
+
 
 ### 6. Dot Formula
 
