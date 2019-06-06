@@ -4,11 +4,11 @@
 
 ### 0. Mac Notes
 
-- Map <CAPS-LOCK> to <ESC>
+- Map `<CAPS-LOCK>` to `<ESC>`
 
-- <C-a> means <CTRL>+<a> from this point
+- `<C-a>` means `<CTRL>+<a>` from this point
 
-- Karibiner Elements: Swap <FN> and <CTRL> so 1 hand can do <C-r>
+- Karibiner Elements: Swap `<FN>` and `<CTRL>  `so 1 hand can do `<C-r>`
 
   
 
@@ -35,7 +35,7 @@ Basic motions:
 | S                | ^C                     |
 | I                | ^i                     |
 | A                | $a                     |
-| o                | A<CR>                  |
+| o                | A`<CR>`                |
 | O                | ko                     |
 
 
@@ -58,8 +58,8 @@ __e.g. Adding space between + sign:__
 | Make a change                    | {edit}                | .      | u       |
 | Scan line for next character     | f{char}/t{char}       | ;      | ,       |
 | Scan line for previous character | F{char}/T{char}       | ;      | ,       |
-| Scan document for next match     | /pattern<CR>          | n      | N       |
-| Scan document for previous match | ?pattern<CR>          | n      | N       |
+| Scan document for next match     | /pattern`<CR>`        | n      | N       |
+| Scan document for previous match | ?pattern`<CR>`        | n      | N       |
 | Perform substitution             | :s/target/replacement | &      | u       |
 | Execute a sequence of changes    | qx{changes}q          | @x     | u       |
 

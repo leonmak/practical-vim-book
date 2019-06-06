@@ -1,0 +1,393 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>The Vim Way · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1-modes.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="0-the-vim-way.html">
+            
+                <a href="0-the-vim-way.html">
+            
+                    
+                    The Vim Way
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="1-modes.html">
+            
+                <a href="1-modes.html">
+            
+                    
+                    Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >The Vim Way</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="the-vim-way">The VIM way</h2>
+<h3 id="0-mac-notes">0. Mac Notes</h3>
+<ul>
+<li><p>Map <code>&lt;CAPS-LOCK&gt;</code> to <code>&lt;ESC&gt;</code></p>
+</li>
+<li><p><code>&lt;C-a&gt;</code> means <code>&lt;CTRL&gt;+&lt;a&gt;</code> from this point</p>
+</li>
+<li><p>Karibiner Elements: Swap <code>&lt;FN&gt;</code> and <code>&lt;CTRL&gt;</code>so 1 hand can do <code>&lt;C-r&gt;</code></p>
+</li>
+</ul>
+<h3 id="1-dot-command">1. Dot Command</h3>
+<ol>
+<li><p><code>x</code>: cut, <code>&gt;G</code> indent </p>
+</li>
+<li><p><code>.</code>: repeat</p>
+</li>
+</ol>
+<h3 id="2-compound-movement">2. Compound Movement</h3>
+<p>Basic motions:</p>
+<ul>
+<li>up/down: <code>j</code> /<code>k</code></li>
+<li>left/right: <code>h</code>/<code>l</code></li>
+<li>prev/next para: <code>&lt;S-[&gt;</code> /  <code>&lt;S-]&gt;</code> </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Compound Command</th>
+<th style="text-align:left">Equivalent in Longhand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">c$</td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:left">cl</td>
+</tr>
+<tr>
+<td style="text-align:left">S</td>
+<td style="text-align:left">^C</td>
+</tr>
+<tr>
+<td style="text-align:left">I</td>
+<td style="text-align:left">^i</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">$a</td>
+</tr>
+<tr>
+<td style="text-align:left">o</td>
+<td style="text-align:left">A<code>&lt;CR&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">O</td>
+<td style="text-align:left">ko</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-repeatable-chunks">3. Repeatable Chunks</h3>
+<p><strong>e.g. Adding space between + sign:</strong></p>
+<ol>
+<li><code>f+</code>: find +</li>
+<li><code>s&lt;SPACE&gt;+&lt;SPACE&gt;&lt;ESC&gt;</code>: replace &apos;+&apos; with &apos; + &apos;</li>
+<li><code>;</code>: repeat search (1)</li>
+<li><code>.</code>: repeat replacement</li>
+</ol>
+<h3 id="4-repeat-forward-or-backward">4. Repeat Forward, or Backward</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Intent</th>
+<th style="text-align:left">Act</th>
+<th style="text-align:left">Repeat</th>
+<th style="text-align:left">Reverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Make a change</td>
+<td style="text-align:left">{edit}</td>
+<td style="text-align:left">.</td>
+<td style="text-align:left">u</td>
+</tr>
+<tr>
+<td style="text-align:left">Scan line for next character</td>
+<td style="text-align:left">f{char}/t{char}</td>
+<td style="text-align:left">;</td>
+<td style="text-align:left">,</td>
+</tr>
+<tr>
+<td style="text-align:left">Scan line for previous character</td>
+<td style="text-align:left">F{char}/T{char}</td>
+<td style="text-align:left">;</td>
+<td style="text-align:left">,</td>
+</tr>
+<tr>
+<td style="text-align:left">Scan document for next match</td>
+<td style="text-align:left">/pattern<code>&lt;CR&gt;</code></td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">N</td>
+</tr>
+<tr>
+<td style="text-align:left">Scan document for previous match</td>
+<td style="text-align:left">?pattern<code>&lt;CR&gt;</code></td>
+<td style="text-align:left">n</td>
+<td style="text-align:left">N</td>
+</tr>
+<tr>
+<td style="text-align:left">Perform substitution</td>
+<td style="text-align:left">:s/target/replacement</td>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:left">u</td>
+</tr>
+<tr>
+<td style="text-align:left">Execute a sequence of changes</td>
+<td style="text-align:left">qx{changes}q</td>
+<td style="text-align:left">@x</td>
+<td style="text-align:left">u</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-replace-by-hand">5. Replace by Hand</h3>
+<p>intent: replace selected &apos;target&apos; with &apos;new_word&apos;</p>
+<ol>
+<li><code>/targ</code>: search for &apos;target&apos; word with prefix</li>
+<li><p><code>*</code>: make search cursor highlight &apos;target&apos; word</p>
+</li>
+<li><p><code>cw&lt;new_word&gt;&lt;ESC&gt;</code>: <em>change</em> &apos;target&apos; to &apos;new word&apos;</p>
+</li>
+<li><code>n</code>: move the next match for &apos;target&apos;</li>
+<li><code>.</code>: repeat the change word action</li>
+</ol>
+<h3 id="6-dot-formula">6. Dot Formula</h3>
+<p>The ideal is 1 command for movement, 1 command for action (repeatable with the <code>.</code> command) :smile:</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="1-modes.html" class="navigation navigation-next " aria-label="Next page: Modes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"The Vim Way","level":"1.2","depth":1,"next":{"title":"Modes","level":"1.3","depth":1,"path":"1-modes.md","ref":"1-modes.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-the-vim-way.md","mtime":"2019-06-06T13:33:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-06T13:43:17.248Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
